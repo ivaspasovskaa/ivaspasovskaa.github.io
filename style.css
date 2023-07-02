@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+
+/*navbar section*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu',sans-serif;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: #98c49d;
+    padding: 15px 0;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-family: 'Dancing Script',sans-serif;
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+.navbar .logo a span{
+    color: #98c49d;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: white;
+}
+.navbar .menu li{
+    text-decoration: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.5s ease;
+}
+.navbar .menu li a:hover{
+    color: #98c49d;
+}
+.navbar.sticky .menu li a:hover{
+    transition: color 0.5s ease;
+    color: #2f4131;
+}
+
+/*menu button*/
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/*scroll-up button*/
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #98c49d;
+    color: #2f4131;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 999;
+    font-size: 25px;
+    border-right: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*home section*/
+.home{
+    display: flex;
+    background: #2f4131;
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+    font-family: 'Ubuntu',sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .left{
+    /*width: 300%;*/
+}
+.home .home-content .left .text1{
+    font-size: 27px;
+}
+.home .home-content .left .text2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .left .text3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .left .text3 span{
+    color: #98c49d;
+    font-weight: 500;
+}
+.home .home-content .left .socials i{
+    font-size: 50px;
+    padding-top: 35px;
+    color: #98c49d;
+}
+.home .home-content .right img{
+    /*padding-right: 0;*/
+    /*margin-right: 0;*/
+    position: absolute;
+    width: 65%;
+    right: 0;
+    bottom: 0;
+}
+
+/*all sections*/
+section, footer{
+    padding: 100px 0 140px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.home .home-content,
+.about .about-content,
+.passions .passions-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    color: #2f4131;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 230px;
+    height: 3px;
+    background: #2f4131;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #98c49d;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+/*about me section*/
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content .left{
+    width: 35%;
+}
+.about .about-content .left img{
+    height: 485px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+.about .about-content .right{
+    width: 65%;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right .download-btn{
+    display: inline-block;
+    background: #98c49d;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 2px solid #98c49d;
+    transition: all 0.3s ease;
+}
+.about .about-content .right .download-btn:hover{
+    background: none;
+    color: #98c49d;
+}
+
+/*passions section*/
+.passions{
+    background: #2f4131;
+}
+.passions .title{
+    color: #98c49d;
+}
+.passions .title::before{
+    background: #98c49d;
+}
+.passions .title::after{
+    content: "what i love";
+    color: white;
+    background: #2f4131;
+}
+.passions .passions-content .card{
+    width: calc(33% - 20px);
+    height: 250px;
+    background: #537056;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    padding: 50px 25px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.passions .passions-content .card:hover{
+    background: #98c49d;
+}
+.passions .passions-content .card .box{
+    transition: all 0.3s ease;
+}
+.passions .passions-content .card:hover .box{
+    transform: scale(1.05);
+    color: black;
+}
+.passions .passions-content .card i{
+    font-size: 50px;
+    color: #98c49d;
+    transition: color 0.3s ease;
+}
+.passions .passions-content .card:hover i{
+    color: black;
+}
+.passions .passions-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.passions .passions-content .card .links{
+    color: #98c49d;
+    font-weight: 600;
+}
+.passions .passions-content .card:hover .links{
+    color: #2f4131;
+}
+
+/*skills section*/
+.skills .title::after{
+    content: "what i know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+    margin-top: 40px;
+}
+.skills .skills-content .left p{
+    font-size: 18px;
+    text-align: justify;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 20px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: #98c49d;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: #2f4131;
+}
+.skills .skills-content .right .css::before{
+    width: 70%;
+}
+.skills .skills-content .right .js::before{
+    width: 30%;
+}
+.skills .skills-content .right .c::before{
+    width: 90%;
+}
+.skills .skills-content .right .c++::before{
+    width: 85%;
+}
+.skills .skills-content .right .cSharp::before{
+    width: 20%;
+}
+
+/*contact section*/
+.contact{
+    background: #2f4131;
+}
+.contact .title{
+    color: #98c49d;
+}
+.contact .title::before{
+    background: #98c49d;
+}
+.contact .title::after{
+    content: "get in touch";
+    color: white;
+    background: #2f4131;
+}
+.contact .contact-content .column{
+    color: white;
+}
+.contact .contact-content .left{
+    width: 35%;
+    margin-right: 10px;
+}
+.contact .contact-content .right{
+    width: 55%;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 15px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #537056;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .row .info .sub-title{
+    color: #98c49d;
+}
+.contact .contact-content .right{
+    background: #537056;
+    border-radius: 30px;
+    padding: 50px;
+}
+.contact .contact-content .right form .fields{
+    display: flex;
+}
+.contact .contact-content .right form .field,
+.contact .contact-content .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 45px;
+}
+.contact .contact-content .right form .textarea{
+    height: 100px;
+    width: 100%;
+}
+.contact .contact-content .right form .name{
+    margin-right: 10px;
+}
+.contact .contact-content .right form .email{
+    margin-left: 10px;
+}
+.contact .contact-content .right form .field input,
+.contact .contact-content .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .contact-content .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .contact-content .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .contact-content .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #98c49d;
+    background: #98c49d;
+    color: #537056;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .contact-content .right form .button button:hover{
+    background: none;
+    color: #98c49d;
+}
+
+/*footer section*/
+footer{
+    /*background: #98c49d;*/
+    padding: 12px 23px;
+    color: #2f4131;
+    text-align: center;
+}
+
+
+/*responsive media query*/
+@media(max-width: 1300px){
+    .home .max-width{
+        margin-left: 0;
+    }
+    .home .home-content .right img{
+        width: 70%;
+    }
+}
+
+@media(max-width: 1104px){
+    .about .about-content .column-left img{
+        height: 350px;
+    }
+}
+
+@media(max-width: 1084px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .home .home-content .left .text2{
+        font-size: 70px;
+    }
+    .home .home-content .left .text3{
+        font-size: 35px;
+    }
+    .home .home-content .right img{
+        width: 75%;
+    }
+}
+
+@media(max-width: 900px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #2f4131;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.5s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .navbar .menu li a:hover{
+        color: #98c49d;
+    }
+    .navbar.sticky .menu li a:hover{
+        color: #98c49d;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .home .home-content .right img{
+        width: 80%;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .about .about-content .right a{
+        font-size: 18px;
+        padding: 6px 25px;
+    }
+    .passions .passions-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media(max-width: 820px) {
+    .home .home-content .right img{
+        width: 85%;
+    }
+}
+
+@media(max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .left .text2{
+        font-size: 60px;
+    }
+    .home .home-content .left .text3{
+        font-size: 31px;
+    }
+    .home .home-content .right img{
+        width: 90%;
+    }
+    .about .about-content .right a{
+        font-size: 16px;
+    }
+    .passions .passions-content .card{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    .home .home-content .left .text2{
+        font-size: 50px;
+    }
+    .home .home-content .left .text3{
+        font-size: 27px;
+    }
+    .home .home-content .right img{
+        width: 100%;
+    }
+    .about .about-content .right a{
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
